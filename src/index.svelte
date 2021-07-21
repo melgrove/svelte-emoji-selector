@@ -151,6 +151,7 @@
 
   .svelte-emoji-picker__trigger {
     cursor: pointer;
+    padding: 2rem 2rem 2rem 2rem;
   }
 
   .svelte-emoji-picker__emoji-tabs {
