@@ -4034,8 +4034,8 @@ class EmojiDetail extends SvelteComponent {
 
 function add_css$5() {
 	var style = element("style");
-	style.id = 'svelte-xz2tlu-style';
-	style.textContent = "button.svelte-xz2tlu{border:none;background:transparent;cursor:pointer;font-size:1.3em;width:3em;height:3em;padding:2em 1em 2em 1em;margin:0}button.svelte-xz2tlu:hover{background:#E8F4F9;border-radius:5px}";
+	style.id = 'svelte-122falo-style';
+	style.textContent = "button.svelte-122falo{border:none;background:transparent;cursor:pointer;font-size:1.3em;width:1.5em;height:1.5em;padding:0;margin:0}button.svelte-122falo:hover{background:#E8F4F9;border-radius:5px}";
 	append(document.head, style);
 }
 
@@ -4046,7 +4046,7 @@ function create_fragment$7(ctx) {
 		c() {
 			button = element("button");
 			t = text(t_value);
-			attr(button, "class", "svelte-xz2tlu");
+			attr(button, "class", "svelte-122falo");
 
 			dispose = [
 				listen(button, "mouseover", ctx.onMouseOver),
@@ -4106,7 +4106,7 @@ function instance$7($$self, $$props, $$invalidate) {
 class Emoji extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-xz2tlu-style")) add_css$5();
+		if (!document.getElementById("svelte-122falo-style")) add_css$5();
 		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["emoji"]);
 	}
 }
@@ -5011,8 +5011,8 @@ class VariantPopup extends SvelteComponent {
 
 function add_css$a() {
 	var style = element("style");
-	style.id = 'svelte-1ojcfs2-style';
-	style.textContent = ".svelte-emoji-picker.svelte-1ojcfs2{background:#FFFFFF;border:1px solid #CCCCCC;border-radius:5px;width:23rem;height:21rem;margin:0 0.5em;box-shadow:0px 0px 3px 1px #CCCCCC}.svelte-emoji-picker__trigger.svelte-1ojcfs2{cursor:pointer}.svelte-emoji-picker__emoji-tabs.svelte-1ojcfs2{padding:0.25em;height:15rem}.svelte-emoji-picker__emoji-tabs .svelte-tabs ul.svelte-tabs__tab-list{display:flex}.svelte-emoji-picker__emoji-tabs .svelte-tabs li.svelte-tabs__tab{flex-grow:1}";
+	style.id = 'svelte-d48g0m-style';
+	style.textContent = ".svelte-emoji-picker.svelte-d48g0m{background:#FFFFFF;border:1px solid #CCCCCC;border-radius:5px;width:23rem;height:21rem;margin:0 0.5em;box-shadow:0px 0px 3px 1px #CCCCCC}.svelte-emoji-picker__trigger.svelte-d48g0m{cursor:pointer;padding:2rem 2rem 2rem 2rem}.svelte-emoji-picker__emoji-tabs.svelte-d48g0m{padding:0.25em;height:15rem}.svelte-emoji-picker__emoji-tabs .svelte-tabs ul.svelte-tabs__tab-list{display:flex}.svelte-emoji-picker__emoji-tabs .svelte-tabs li.svelte-tabs__tab{flex-grow:1}";
 	append(document.head, style);
 }
 
@@ -5028,7 +5028,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (176:0) {#if pickerVisible}
+// (177:0) {#if pickerVisible}
 function create_if_block$4(ctx) {
 	var current;
 
@@ -5076,7 +5076,7 @@ function create_if_block$4(ctx) {
 	};
 }
 
-// (182:6) {:else}
+// (183:6) {:else}
 function create_else_block$3(ctx) {
 	var div, current;
 
@@ -5092,7 +5092,7 @@ function create_else_block$3(ctx) {
 		c() {
 			div = element("div");
 			tabs.$$.fragment.c();
-			attr(div, "class", "svelte-emoji-picker__emoji-tabs svelte-1ojcfs2");
+			attr(div, "class", "svelte-emoji-picker__emoji-tabs svelte-d48g0m");
 		},
 
 		m(target, anchor) {
@@ -5129,7 +5129,7 @@ function create_else_block$3(ctx) {
 	};
 }
 
-// (180:6) {#if searchText}
+// (181:6) {#if searchText}
 function create_if_block_2(ctx) {
 	var current;
 
@@ -5171,7 +5171,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (186:14) <Tab>
+// (187:14) <Tab>
 function create_default_slot_6(ctx) {
 	var current;
 
@@ -5211,7 +5211,7 @@ function create_default_slot_6(ctx) {
 	};
 }
 
-// (188:16) <Tab>
+// (189:16) <Tab>
 function create_default_slot_5(ctx) {
 	var current;
 
@@ -5251,7 +5251,7 @@ function create_default_slot_5(ctx) {
 	};
 }
 
-// (187:14) {#each categoryOrder as category}
+// (188:14) {#each categoryOrder as category}
 function create_each_block_1(ctx) {
 	var current;
 
@@ -5296,7 +5296,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (185:12) <TabList>
+// (186:12) <TabList>
 function create_default_slot_4(ctx) {
 	var t, each_1_anchor, current;
 
@@ -5405,7 +5405,7 @@ function create_default_slot_4(ctx) {
 	};
 }
 
-// (192:12) <TabPanel>
+// (193:12) <TabPanel>
 function create_default_slot_3(ctx) {
 	var current;
 
@@ -5452,7 +5452,7 @@ function create_default_slot_3(ctx) {
 	};
 }
 
-// (197:14) <TabPanel>
+// (198:14) <TabPanel>
 function create_default_slot_2(ctx) {
 	var t, current;
 
@@ -5506,7 +5506,7 @@ function create_default_slot_2(ctx) {
 	};
 }
 
-// (196:12) {#each categoryOrder as category}
+// (197:12) {#each categoryOrder as category}
 function create_each_block$2(ctx) {
 	var current;
 
@@ -5551,7 +5551,7 @@ function create_each_block$2(ctx) {
 	};
 }
 
-// (184:10) <Tabs initialSelectedIndex={1}>
+// (185:10) <Tabs initialSelectedIndex={1}>
 function create_default_slot_1(ctx) {
 	var t0, t1, each_1_anchor, current;
 
@@ -5684,7 +5684,7 @@ function create_default_slot_1(ctx) {
 	};
 }
 
-// (205:6) {#if variantsVisible}
+// (206:6) {#if variantsVisible}
 function create_if_block_1(ctx) {
 	var current;
 
@@ -5726,7 +5726,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (177:2) <ClickOutside on:clickoutside={hidePicker} exclude={[triggerButtonEl]}>
+// (178:2) <ClickOutside on:clickoutside={hidePicker} exclude={[triggerButtonEl]}>
 function create_default_slot(ctx) {
 	var div, updating_searchText, t0, current_block_type_index, if_block0, t1, t2, current, dispose;
 
@@ -5773,7 +5773,7 @@ function create_default_slot(ctx) {
 			if (if_block1) if_block1.c();
 			t2 = space();
 			emojidetail.$$.fragment.c();
-			attr(div, "class", "svelte-emoji-picker svelte-1ojcfs2");
+			attr(div, "class", "svelte-emoji-picker svelte-d48g0m");
 			dispose = listen(div, "keydown", ctx.onKeyDown);
 		},
 
@@ -5895,7 +5895,7 @@ function create_fragment$c(ctx) {
 			t1 = space();
 			if (if_block) if_block.c();
 			if_block_anchor = empty();
-			attr(button, "class", "svelte-emoji-picker__trigger svelte-1ojcfs2");
+			attr(button, "class", "svelte-emoji-picker__trigger svelte-d48g0m");
 			dispose = listen(button, "click", ctx.togglePicker);
 		},
 
@@ -6150,7 +6150,7 @@ function instance$c($$self, $$props, $$invalidate) {
 class Index$1 extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-1ojcfs2-style")) add_css$a();
+		if (!document.getElementById("svelte-d48g0m-style")) add_css$a();
 		init(this, options, instance$c, create_fragment$c, safe_not_equal, ["maxRecents", "autoClose"]);
 	}
 }
