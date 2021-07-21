@@ -5011,8 +5011,8 @@ class VariantPopup extends SvelteComponent {
 
 function add_css$a() {
 	var style = element("style");
-	style.id = 'svelte-d48g0m-style';
-	style.textContent = ".svelte-emoji-picker.svelte-d48g0m{background:#FFFFFF;border:1px solid #CCCCCC;border-radius:5px;width:23rem;height:21rem;margin:0 0.5em;box-shadow:0px 0px 3px 1px #CCCCCC}.svelte-emoji-picker__trigger.svelte-d48g0m{cursor:pointer;padding:2rem 2rem 2rem 2rem}.svelte-emoji-picker__emoji-tabs.svelte-d48g0m{padding:0.25em;height:15rem}.svelte-emoji-picker__emoji-tabs .svelte-tabs ul.svelte-tabs__tab-list{display:flex}.svelte-emoji-picker__emoji-tabs .svelte-tabs li.svelte-tabs__tab{flex-grow:1}";
+	style.id = 'svelte-1l7but6-style';
+	style.textContent = ".svelte-emoji-picker.svelte-1l7but6{background:#FFFFFF;border:1px solid #CCCCCC;border-radius:5px;width:23rem;height:21rem;margin:0 0.5em;box-shadow:0px 0px 3px 1px #CCCCCC}.svelte-emoji-picker__trigger.svelte-1l7but6{cursor:pointer;padding:1rem 1rem 1rem 1rem}.svelte-emoji-picker__emoji-tabs.svelte-1l7but6{padding:0.25em;height:15rem}.svelte-emoji-picker__emoji-tabs .svelte-tabs ul.svelte-tabs__tab-list{display:flex}.svelte-emoji-picker__emoji-tabs .svelte-tabs li.svelte-tabs__tab{flex-grow:1}";
 	append(document.head, style);
 }
 
@@ -5092,7 +5092,7 @@ function create_else_block$3(ctx) {
 		c() {
 			div = element("div");
 			tabs.$$.fragment.c();
-			attr(div, "class", "svelte-emoji-picker__emoji-tabs svelte-d48g0m");
+			attr(div, "class", "svelte-emoji-picker__emoji-tabs svelte-1l7but6");
 		},
 
 		m(target, anchor) {
@@ -5773,7 +5773,7 @@ function create_default_slot(ctx) {
 			if (if_block1) if_block1.c();
 			t2 = space();
 			emojidetail.$$.fragment.c();
-			attr(div, "class", "svelte-emoji-picker svelte-d48g0m");
+			attr(div, "class", "svelte-emoji-picker svelte-1l7but6");
 			dispose = listen(div, "keydown", ctx.onKeyDown);
 		},
 
@@ -5895,7 +5895,7 @@ function create_fragment$c(ctx) {
 			t1 = space();
 			if (if_block) if_block.c();
 			if_block_anchor = empty();
-			attr(button, "class", "svelte-emoji-picker__trigger svelte-d48g0m");
+			attr(button, "class", "svelte-emoji-picker__trigger svelte-1l7but6");
 			dispose = listen(button, "click", ctx.togglePicker);
 		},
 
@@ -6150,7 +6150,7 @@ function instance$c($$self, $$props, $$invalidate) {
 class Index$1 extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-d48g0m-style")) add_css$a();
+		if (!document.getElementById("svelte-1l7but6-style")) add_css$a();
 		init(this, options, instance$c, create_fragment$c, safe_not_equal, ["maxRecents", "autoClose"]);
 	}
 }
