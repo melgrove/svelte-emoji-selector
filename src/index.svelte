@@ -32,7 +32,14 @@
   let variants;
   let currentEmoji;
   let searchText;
-  let recentEmojis = JSON.parse(localStorage.getItem('svelte-emoji-picker-recent')) || [];
+  let recentEmojis;
+  let saveRecent;
+  onMount(() -> {
+    saveRecent = (emoji) => {
+    recentEmojis = [emoji, ...recentEmojis.filter(recent => recent.key !== emoji.key)].slice(0, maxRecents);
+    window.localStorage.setItem('svelte-emoji-picker-recent', JSON.stringify(recentEmojis));
+  }
+    recentEmojis = JSON.parse(window.localStorage.getItem('svelte-emoji-picker-recent')) || [];  }
 
   const dispatch = createEventDispatcher();
 
@@ -120,11 +127,6 @@
     if (autoClose) {
       hidePicker();
     }
-  }
-
-  function saveRecent(emoji) {
-    recentEmojis = [emoji, ...recentEmojis.filter(recent => recent.key !== emoji.key)].slice(0, maxRecents);
-    localStorage.setItem('svelte-emoji-picker-recent', JSON.stringify(recentEmojis));
   }
 
   function hideVariants() {
