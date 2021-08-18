@@ -5034,7 +5034,7 @@
     	return child_ctx;
     }
 
-    // (177:0) {#if pickerVisible}
+    // (179:0) {#if pickerVisible}
     function create_if_block$4(ctx) {
     	var current;
 
@@ -5082,7 +5082,7 @@
     	};
     }
 
-    // (183:6) {:else}
+    // (185:6) {:else}
     function create_else_block$3(ctx) {
     	var div, current;
 
@@ -5135,7 +5135,7 @@
     	};
     }
 
-    // (181:6) {#if searchText}
+    // (183:6) {#if searchText}
     function create_if_block_2(ctx) {
     	var current;
 
@@ -5177,7 +5177,7 @@
     	};
     }
 
-    // (187:14) <Tab>
+    // (189:14) <Tab>
     function create_default_slot_6(ctx) {
     	var current;
 
@@ -5217,7 +5217,7 @@
     	};
     }
 
-    // (189:16) <Tab>
+    // (191:16) <Tab>
     function create_default_slot_5(ctx) {
     	var current;
 
@@ -5257,7 +5257,7 @@
     	};
     }
 
-    // (188:14) {#each categoryOrder as category}
+    // (190:14) {#each categoryOrder as category}
     function create_each_block_1(ctx) {
     	var current;
 
@@ -5302,7 +5302,7 @@
     	};
     }
 
-    // (186:12) <TabList>
+    // (188:12) <TabList>
     function create_default_slot_4(ctx) {
     	var t, each_1_anchor, current;
 
@@ -5411,7 +5411,7 @@
     	};
     }
 
-    // (193:12) <TabPanel>
+    // (195:12) <TabPanel>
     function create_default_slot_3(ctx) {
     	var current;
 
@@ -5458,7 +5458,7 @@
     	};
     }
 
-    // (198:14) <TabPanel>
+    // (200:14) <TabPanel>
     function create_default_slot_2(ctx) {
     	var t, current;
 
@@ -5512,7 +5512,7 @@
     	};
     }
 
-    // (197:12) {#each categoryOrder as category}
+    // (199:12) {#each categoryOrder as category}
     function create_each_block$2(ctx) {
     	var current;
 
@@ -5557,7 +5557,7 @@
     	};
     }
 
-    // (185:10) <Tabs initialSelectedIndex={1}>
+    // (187:10) <Tabs initialSelectedIndex={1}>
     function create_default_slot_1(ctx) {
     	var t0, t1, each_1_anchor, current;
 
@@ -5690,7 +5690,7 @@
     	};
     }
 
-    // (206:6) {#if variantsVisible}
+    // (208:6) {#if variantsVisible}
     function create_if_block_1(ctx) {
     	var current;
 
@@ -5732,7 +5732,7 @@
     	};
     }
 
-    // (178:2) <ClickOutside on:clickoutside={hidePicker} exclude={[triggerButtonEl]}>
+    // (180:2) <ClickOutside on:clickoutside={hidePicker} exclude={[triggerButtonEl]}>
     function create_default_slot(ctx) {
     	var div, updating_searchText, t0, current_block_type_index, if_block0, t1, t2, current, dispose;
 
@@ -5998,7 +5998,14 @@
       let variants;
       let currentEmoji;
       let searchText;
-      let recentEmojis = JSON.parse(localStorage.getItem('svelte-emoji-picker-recent')) || [];
+      let recentEmojis;
+      let saveRecent;
+      onMount(() => {
+        saveRecent = (emoji) => {
+          $$invalidate('recentEmojis', recentEmojis = [emoji, ...recentEmojis.filter(recent => recent.key !== emoji.key)].slice(0, maxRecents));
+          window.localStorage.setItem('svelte-emoji-picker-recent', JSON.stringify(recentEmojis));
+        };
+        $$invalidate('recentEmojis', recentEmojis = JSON.parse(window.localStorage.getItem('svelte-emoji-picker-recent')) || []);  });
 
       const dispatch = createEventDispatcher();
 
@@ -6086,11 +6093,6 @@
         if (autoClose) {
           hidePicker();
         }
-      }
-
-      function saveRecent(emoji) {
-        $$invalidate('recentEmojis', recentEmojis = [emoji, ...recentEmojis.filter(recent => recent.key !== emoji.key)].slice(0, maxRecents));
-        localStorage.setItem('svelte-emoji-picker-recent', JSON.stringify(recentEmojis));
       }
 
       function hideVariants() {
